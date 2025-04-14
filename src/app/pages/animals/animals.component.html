@@ -1,0 +1,62 @@
+<div class="container pt-5 mt-5 mb-5" style="padding-top: 80px;">
+    <h2 class="mb-4 text-center text-primary"><i class="fas fa-dog"></i> Animalele noastre</h2>
+  
+    <div class="input-group mb-4">
+      <input type="text" [(ngModel)]="searchTerm" class="form-control" placeholder="Caută după nume, rasă sau specie...">
+      <button class="btn btn-custom" (click)="clearSearch()">Reseteaza</button>
+    </div>
+  
+    <div class="table-responsive">
+      <table class="table align-middle text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Imagine</th>
+            <th>Nume</th>
+            <th class="d-none d-md-table-cell">Specie</th>
+            <th>Rasă</th>
+            <th class="d-none d-md-table-cell">Vârstă</th>
+            <th class="d-none d-md-table-cell">Sex</th>
+            <th>Stare</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let animal of filteredAnimals()">
+            <td class="position-relative">
+                <div style="cursor: pointer;">
+                    <img
+                        [src]="animal.image"
+                        [alt]="animal.name"
+                        height="70"
+                        [title]="animal.status === 'Disponibil' ? 'Click pentru detalii despre ' + animal.name : ''"
+                        [ngClass]="{
+                            'animal-thumb': true,
+                            'rounded': true,
+                            'disabled': animal.status !== 'Disponibil'
+                        }"
+                        (mouseenter)="showPreview(animal.image)"
+                        (mouseleave)="hidePreview()"
+                        (click)="animal.status === 'Disponibil' && goToDetail(animal.id)">
+                </div>
+              </td>
+            <td>{{ animal.name }}</td>
+            <td class="d-none d-md-table-cell">{{ animal.species }}</td>
+            <td>{{ animal.breed }}</td>
+            <td class="d-none d-md-table-cell">{{ animal.age }}</td>
+            <td class="d-none d-md-table-cell">{{ animal.sex }}</td>
+            <td>
+              <span class="badge" [ngClass]="animal.status === 'Disponibil' ? 'bg-success' : 'bg-secondary'">
+                {{ animal.status }}
+              </span>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div *ngIf="previewImage" class="image-preview-overlay">
+    <img [src]="previewImage" class="image-preview-img" />
+  </div>
+  
+  

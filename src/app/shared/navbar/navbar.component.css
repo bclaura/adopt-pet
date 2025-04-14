@@ -1,0 +1,38 @@
+
+  body {
+    padding-top: 70px;
+  }
+
+  .navbar {
+    background-color: #f1e6d4 !important;
+  }
+  
+  .navbar .nav-link {
+    color: #37393d !important;
+    font-weight: 500;
+  }
+
+  .nav-link.active {
+    background-color: #fecd3b; 
+    color: #271c0f !important;
+    border-radius: 999px;
+    padding: 5px 10px;
+    font-weight: 600;
+  }
+
+  .nav-link {
+    padding: 5px 10px;
+    border-radius: 30px;
+    transition: none !important;
+  }
+
+  .rotate-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+  
+
+
+  
+  
+  

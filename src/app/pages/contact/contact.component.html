@@ -1,0 +1,38 @@
+<div class="container pt-5 mt-5 mb-5" style="max-width: 700px;">
+    <h2 class="text-center text-primary mb-4"><i class="fas fa-envelope"></i> Contactează-ne</h2>
+  
+    <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nume</label>
+        <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="form.name">
+        <div *ngIf="contactForm.submitted && !form.name" class="text-danger">Numele este obligatoriu.</div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="form.email">
+        <div *ngIf="contactForm.submitted && !contactForm.controls['email']?.valid" class="text-danger">Email invalid.</div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="phone" class="form-label">Telefon</label>
+        <input type="text" class="form-control" id="phone" name="phone" required pattern="[0-9]{10,}" [(ngModel)]="form.phone">
+        <div *ngIf="contactForm.submitted && !contactForm.controls['phone']?.valid" class="text-danger">
+          Telefon invalid (minim 10 cifre).
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="message" class="form-label">Mesaj</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required [(ngModel)]="form.message"></textarea>
+        <div *ngIf="contactForm.submitted && !form.message" class="text-danger">Mesajul este obligatoriu.</div>
+      </div>
+  
+      <button type="submit" class="btn btn-custom-full w-100">Trimite mesaj</button>
+  
+      <div *ngIf="success" class="alert alert-success mt-4">
+        Mesajul tău a fost trimis cu succes!
+      </div>
+    </form>
+  </div>
+  

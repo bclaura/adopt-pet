@@ -1,0 +1,75 @@
+<div class="container py-5 pt-5 mt-4 " *ngIf="pet">
+    <div class="row">
+      <div class="col-md-5 mb-4 mb-md-0">
+        <img [src]="pet.imagine" class="img-fluid rounded shadow-sm" [alt]="pet.nume">
+      </div>
+      <div class="col-md-7">
+        <h2 class="text-primary mb-3">{{ pet.nume }}</h2>
+        <ul class="list-group mb-4">
+          <li class="list-group-item"><strong>Specie:</strong> {{ pet.specie }}</li>
+          <li class="list-group-item"><strong>ID:</strong> {{ pet.id }}</li>
+          <li class="list-group-item"><strong>Vârstă:</strong> {{ pet.varsta }}</li>
+          <li class="list-group-item"><strong>Sex:</strong> {{ pet.sex }}</li>
+          <li class="list-group-item"><strong>Castrat:</strong> {{ pet.castrat ? 'Da' : 'Nu' }}</li>
+          <li class="list-group-item"><strong>Mărime:</strong> {{ pet.marime }}</li>
+          <li class="list-group-item"><strong>Greutate:</strong> {{ pet.greutate }}</li>
+          <li class="list-group-item"><strong>Culoare:</strong> {{ pet.culoare }}</li>
+          <li class="list-group-item"><strong>Rasă:</strong> {{ pet.rasa }}</li>
+        </ul>
+        <button class="btn btn-warning fw-bold" (click)="openAdoptModal()">Adoptă-l pe {{ pet.nume }}</button>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="adoptModal" tabindex="-1" aria-labelledby="adoptModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h5 class="modal-title" id="adoptModalLabel">Adoptă-l pe {{ pet?.nume }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
+        </div>
+  
+        <div class="modal-body">
+          <form #adoptForm="ngForm" (ngSubmit)="submitForm(adoptForm)">
+            <label for="name" class="form-label">Nume</label>
+            <input type="text" id="name" name="name" class="form-control" required [(ngModel)]="formData.name" #name="ngModel">
+            <div *ngIf="name.invalid && name.touched" class="text-danger mt-1"> Numele este obligatoriu. </div>
+  
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-control" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" 
+              [(ngModel)]="formData.email" #email="ngModel">
+              <div *ngIf="email.invalid && email.touched" class="text-danger mt-1"> Introdu un email valid. </div>
+            </div>
+  
+            <div class="mb-3">
+              <label for="phone" class="form-label">Telefon</label>
+              <input type="text" id="phone" name="phone" class="form-control" required pattern="^(\+?\d{7,15})$" 
+              [(ngModel)]="formData.phone" #phone="ngModel">
+              <div *ngIf="phone.invalid && phone.touched" class="text-danger mt-1"> Introdu un număr de telefon valid. </div>
+            </div>
+  
+            <div class="mb-3">
+              <label for="message" class="form-label">Mesaj (opțional)</label>
+              <textarea id="message" name="message" ngModel class="form-control" rows="3"></textarea>
+            </div>
+  
+            <button type="submit" class="btn btn-warning" [disabled]="adoptForm.invalid">
+                Trimite cererea
+              </button>
+          </form>
+        </div>
+
+        <div *ngIf="showSuccessMessage" class="alert alert-success mt-3 text-center" role="alert">
+            Cererea de adopție a fost trimisă. Vă vom contacta cât de curând posibil!
+          </div>
+  
+      </div>
+    </div>
+  </div>
+
+
+  
+  
+  

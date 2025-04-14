@@ -1,0 +1,35 @@
+.animal-thumb {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer !important;
+  }
+  
+  
+  .image-preview-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .image-preview-img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+  }
+
+  .animal-thumb.disabled {
+    opacity: 0.6;
+    cursor: not-allowed !important;
+  }
+
+  
+  

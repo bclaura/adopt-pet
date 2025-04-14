@@ -1,0 +1,14 @@
+<div class="container pt-5 mt-5 mb-5 text-center">
+    <h2 class="text-center text-primary mb-5"><i class="fas fa-paw"></i> Animale pentru adoptie</h2>
+  
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let pet of animalsList">
+        <div class="text-center">
+          <img [src]="pet.image" alt="{{ pet.name }}" class="rounded-circle shadow-sm mb-3" width="180" height="180" style="object-fit: cover;">
+          <h5>{{ pet.name }}</h5>
+          <button class="btn btn-warning" [routerLink]="['/adopta', pet.id]">Vezi detalii</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

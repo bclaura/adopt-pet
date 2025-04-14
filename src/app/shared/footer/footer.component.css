@@ -1,0 +1,23 @@
+.custom-footer {
+    background-color: #f1e6d4;
+    color: #37393d;
+  }
+  
+  .custom-footer a {
+    color: #37393d;
+  }
+  
+  .custom-footer a:hover {
+    text-decoration: underline;
+  }
+
+  footer i {
+    color: #37393d;
+    transition: color 0.3s ease;
+  }
+  
+  footer i:hover {
+    color: #ffc107;
+  }
+  
+  

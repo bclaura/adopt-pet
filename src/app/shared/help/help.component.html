@@ -1,0 +1,14 @@
+<button class="help-button" (click)="toggleFAQ()">
+    <i class="fas fa-question-circle"></i>
+  </button>
+  
+  <div class="faq-box shadow-lg" *ngIf="showFAQ">
+    <h5 class="text-primary"><i class="fas fa-person-circle-question"></i> Întrebări frecvente</h5>
+    <ul class="list-unstyled small">
+      <li><strong>Cum pot adopta un animal?</strong><br> Completează formularul și te vom contacta.</li>
+      <li><strong>Ce documente sunt necesare?</strong><br> Buletin și completarea unui formular de responsabilitate.</li>
+      <li><strong>Pot dona?</strong><br> Da, orice sprijin este binevenit. Contactează-ne.</li>
+    </ul>
+    <button class="btn btn-sm btn-custom w-100 mt-2" (click)="toggleFAQ()">Închide</button>
+  </div>
+  

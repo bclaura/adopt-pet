@@ -1,0 +1,36 @@
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* AICI e schimbarea! */
+    z-index: 1050;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .help-button:hover {
+    background-color: #e0a800;
+  }
+  
+  
+  .faq-box {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    width: 300px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1050;
+    border: 1px solid #ccc;
+  }
+  
