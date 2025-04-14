@@ -1,27 +1,9 @@
-# AdoptPet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![image](https://github.com/user-attachments/assets/e9e2c277-dd7d-4e0c-8045-350d58f3e6b6)
+![image](https://github.com/user-attachments/assets/a5fa3f73-3790-46c1-a77a-5f0b87c0beb7)
+![image](https://github.com/user-attachments/assets/225173de-db89-47c5-b0fb-1d0ac07c3b02)
+![image](https://github.com/user-attachments/assets/6b5fca33-2f76-4031-a069-b240cdcf006f)
+![image](https://github.com/user-attachments/assets/62b88859-a745-4df4-8115-dd674bf8b6a1)
+![image](https://github.com/user-attachments/assets/2a33c396-ed97-4d43-8c4c-cf7e1eadc977)
+![image](https://github.com/user-attachments/assets/56de9fdc-94ce-4761-8452-6849e1053866)
+![image](https://github.com/user-attachments/assets/5fcbfd5d-3692-414a-8433-ba2cfc034181)
